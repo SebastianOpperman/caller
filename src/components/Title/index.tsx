@@ -7,7 +7,7 @@ interface Props {
 export default (props:Props) => (
 	<>
 		{props.accepted === 0 && <h1>New delivery</h1>}
-		{props.accepted === 1 && <h1>Declined delivery</h1>}
+		{props.accepted === 1 && <h1>Cancelled delivery</h1>}
 		{props.accepted === 2 && <h1>Let's Go!</h1>}
 	</>
 );

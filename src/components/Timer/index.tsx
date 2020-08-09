@@ -109,11 +109,11 @@ export default class Timer extends React.Component<any, TimerState> {
 					<div />
 				</article>
 				<section className={`${_.options} ${this.state.accepted > 0 ? _.hideButtons : ''}`}>
-					<button onMouseDown={this.onDown} onMouseUp={this.onUp}>
+					<button onMouseDown={this.onDown} onMouseUp={this.onUp} onTouchStart={this.onDown} onTouchEnd={this.onUp}>
 						<Icon_discard />
 						<span>Decline</span>
 					</button>
-					<button onMouseDown={this.onDown} onMouseUp={this.onUp} data-accept={true}>
+					<button onMouseDown={this.onDown} onMouseUp={this.onUp} onTouchStart={this.onDown} onTouchEnd={this.onUp} data-accept={true}>
 						<Icon_accept />
 						<span>Accept</span>
 					</button>
