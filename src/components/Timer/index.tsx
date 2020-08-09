@@ -56,13 +56,13 @@ export default class Timer extends React.Component<any, TimerState> {
 		const accept = e.target.getAttribute('data-accept');
 		this.setState({
 			pressing: setTimeout(() => {
+				window.navigator.vibrate(50);
 				this.handleButton(accept);
 			}, 1000)
 		});
 	}
 
 	onUp() {
-		window.navigator.vibrate(200);
 		clearTimeout(this.state.pressing);
 	}
 
