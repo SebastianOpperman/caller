@@ -32,6 +32,17 @@
 	}
 }
 
+@keyframes grow {
+	from {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+}
+
 .timer {
 	position: relative;
 	display: flex;
@@ -211,11 +222,31 @@
 			}
 		}
 		&:last-of-type {
+			position: relative;
 			background-color: var(--spear);
 			border: 3px solid var(--grass);
 			border-radius: 49px;
 			box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.66);
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0);
+				border-radius: 50%;
+				width: 90%;
+				height: 90%;
+				content: '';
+				background: var(--grass);
+				opacity: 0;
+			}
+			&:active {
+				&:before {
+					animation: grow 1.5s forwards cubic-bezier(0.22, 1, 0.36, 1);
+				}
+			}
 			svg {
+				position: relative;
+				z-index: 1;
 				width: 2.15em;
 				height: 2.15em;
 				fill: white;
