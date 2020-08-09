@@ -1,6 +1,6 @@
 ![Netlify](https://img.shields.io/netlify/5aba16b0-07a8-46ce-8206-d6198fdd4ab0)
 ![LICENSE](https://img.shields.io/badge/license-MIT-green)
-# Responsive React Asssesment Task
+# Animated React Asssesment Task
 DEMO: [caller.netlify.com](https://caller.netlify.com)
 
 This is an assesment task showcasing an animated app built with React. It has been built with no frameworks other then React(TypeScript) and Webpack. The app utilizes PostCSS with CSS Modules. This enables components to have their styling locally scoped.
