@@ -62,6 +62,7 @@ export default class Timer extends React.Component<any, TimerState> {
 	}
 
 	onUp() {
+		window.navigator.vibrate(200);
 		clearTimeout(this.state.pressing);
 	}
 
